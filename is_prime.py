@@ -1,6 +1,6 @@
 #prime_numbers
 import time
-def prime_id(x):
+def is_prime(x):
     prime = True
     for i in range(2,x):
         if x % i == 0:
@@ -8,9 +8,8 @@ def prime_id(x):
             break
     return prime
 
-#print(prime_id())
 start = time.perf_counter()
 for i in range(1,100001):
-    prime_id(i)
+    is_prime(i)
 end = time.perf_counter()
 print(end - start)
