@@ -13,14 +13,16 @@ def isEven(n):
     else:
         return False
 
-count = 0
-num = 0
+count = 1
 sum = 0
-while num < 20:
-    num = Fibonnaci(count)
-    if isEven(num):
-        sum = sum + num
+fib_num = 0
+
+while fib_num < 4*10**6:
+    if isEven(fib_num):
+        sum = sum + fib_num
+    fib_num = Fibonnaci(count)
     count = count + 1
+
 print(sum)
 
 
